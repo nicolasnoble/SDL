@@ -893,6 +893,7 @@ void WIN_OnWindowEnter(_THIS, SDL_Window * window)
         trackMouseEvent.cbSize = sizeof(TRACKMOUSEEVENT);
         trackMouseEvent.dwFlags = TME_LEAVE;
         trackMouseEvent.hwndTrack = data->hwnd;
+        trackMouseEvent.dwHoverTime = HOVER_DEFAULT;
 
         TrackMouseEvent(&trackMouseEvent);
     }
